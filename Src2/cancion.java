@@ -1,9 +1,9 @@
-public class Cancion {
+public class cancion {
     private String titulo;
     private String artista;
     private int duracion;
 
-    public Cancion(String titulo, String artista, int duracion) {
+    public cancion(String titulo, String artista, int duracion) {
         this.titulo = titulo;
         this.artista = artista;
         this.duracion = duracion;

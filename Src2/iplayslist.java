@@ -1,5 +1,8 @@
-interface iplayslist {
-    void agregarCancion(Cancion c);
-    void eliminarCancion(Cancion c);
+public interface iplayslist {
+    void agregarCancion(cancion c);
+    void eliminarCancion(cancion c);
+    cancion reproducirSiguiente();
+    void vaciarLista();
     void mostrarLista();
+    int obtenerCantidadCanciones();
 }
