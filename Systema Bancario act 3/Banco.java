@@ -20,18 +20,18 @@ public class Banco {
     public void probarVelocidad() {
         int cantidad = 1000000;
 
-        long startV = System.currentTimeMillis();
+        long inicio1 = System.currentTimeMillis();
         Vector<Integer> v = new Vector<>();
         for (int i = 0; i < cantidad; i++) { v.add(i); }
-        long endV = System.currentTimeMillis();
+        long final1 = System.currentTimeMillis();
 
-        long startAL = System.currentTimeMillis();
+        long inicio2 = System.currentTimeMillis();
         ArrayList<Integer> al = new ArrayList<>();
         for (int i = 0; i < cantidad; i++) { al.add(i); }
-        long endAL = System.currentTimeMillis();
+        long final2 = System.currentTimeMillis();
 
         System.out.println("RESULTADOS");
-        System.out.println("Vector tardó: " + (endV - startV) + " ms");
-        System.out.println("ArrayList tardó: " + (endAL - startAL) + " ms");
+        System.out.println("Vector tardó: " + (final1 - inicio1) + " ms");
+        System.out.println("ArrayList tardó: " + (final2 - inicio2) + " ms");
     }
 }
