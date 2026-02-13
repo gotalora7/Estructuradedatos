@@ -1,10 +1,9 @@
 public class Main {
     public static void main(String[] args) {
+        Banco miBanco = new Banco();
 
-        BancoLegacy banco = new BancoLegacy();
 
-        banco.ejecutarLogSimulado();
-
-        banco.compararRendimiento();
+        miBanco.agregarMensajes();
+        miBanco.probarVelocidad();
     }
 }
