@@ -1,25 +1,27 @@
 public class Estacionclimatica {
     
-     private double[] temperaturas = new double[24];
+    private double[] temperaturas;
 
     public Estacionclimatica() {
-        for (int i = 0;i temperaturas.length;i++){
-            temperaturas[i] = Math.random()*40;
+        this.temperaturas = new double[24];
+    }
 
+    public void simularDatos() {
+        for (int i = 0; i < temperaturas.length; i++) {
+            this.temperaturas[i] = Math.random() * 40;
         }
-    } 
-    public void mostrartemperaturamediodia() {
-        System.out.println("temperatura medio dia" + temperaturas[12]+ "°c");
     }
-    public void mostrartemperaturainvalidada() {
+
+    public double getTemperaturaHora(int hora) {
+        return this.temperaturas[hora];
+    }
+
+    public void registrarHoraExtraordinaria() {
         try {
-            temperaturas[24] = Math.random()*40;
+            this.temperaturas[24] = 35.0; 
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("error no se puede vertemperatura en 24 horas");
-            System.out.println("java solo tiene memoria fija");
-
+            System.out.println("No se puede registrar la hora 25.");
+            System.out.println("Detalle técnico: Índice fuera de límites.");
+        }
     }
-
-
-    
 }
