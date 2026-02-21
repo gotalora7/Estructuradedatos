@@ -1,6 +1,6 @@
 public class MainHistorial {
     public static void main(String[] args) {
-        Navegador miNav = Navegador new ();
+        Navegador miNav = new Navegador();
 
         System.out.println("Iniciando Navegación");
         miNav.visitarPagina("google.com");
