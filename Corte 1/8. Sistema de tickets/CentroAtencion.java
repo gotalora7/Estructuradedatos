@@ -1,16 +1,20 @@
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.LinkedList;
 
 public class CentroAtencion {
-    private Queue<String> colaSoporte = new LinkedList<>();
-
+    private Queue<String> clientes;
+    
+    public CentroAtencion() {
+        clientes = new LinkedList<>();
+    }
+    
     public void registrarCliente(String nombre) {
-        colaSoporte.offer(nombre);
+        clientes.offer(nombre);
         System.out.println("Nuevo ticket: " + nombre + " se ha unido a la fila.");
     }
 
     public void verSiguiente() {
-        String proximo = colaSoporte.peek();
+        String proximo = clientes.peek();
         if (proximo != null) {
             System.out.println("Próximo cliente en espera: " + proximo);
         } else {
@@ -19,7 +23,7 @@ public class CentroAtencion {
     }
 
     public void atenderCliente() {
-        String clienteAtendido = colaSoporte.poll();
+        String clienteAtendido = clientes.poll();
         
         if (clienteAtendido != null) {
             System.out.println(">>> Atendiendo a: " + clienteAtendido);
