@@ -5,7 +5,7 @@ public class MainInventario {
         miAlmacen.registrarProducto("A001", "Laptop Dell");
         miAlmacen.registrarProducto("B002", "Monitor Samsung");
 
-        System.out.println("\n--- Probando actualización de clave ---");
+        System.out.println("Probando actualización de clave");
         miAlmacen.registrarProducto("A001", "Laptop HP"); 
 
         miAlmacen.buscarPorCodigo("A001");
