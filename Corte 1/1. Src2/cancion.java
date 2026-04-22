@@ -21,3 +21,7 @@ public class cancion {
         return duracion;
     }
 }
+        @Override
+    public String toString() {
+        return "[Estudiante-ID: " + value + "]";
+    }
